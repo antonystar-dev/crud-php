@@ -11,7 +11,6 @@ if ($qtd > 0) {
     echo "<th>EMAIL</th>";
     echo "<th>SENHA</th>";
     echo "<th>AÇÕES</th>";
-
     echo "</tr>";
     while ($row = $res->fetch_object()) {
         echo "<tr>";
@@ -20,8 +19,8 @@ if ($qtd > 0) {
         echo "<td>" . $email = $row->email . "</td>";
         echo "<td>" . $senha = $row->senha . "</td>";
         echo "<td>
-         <button onclick=\"location.href='?page=editar&id=".$row->id."';\" class='btn btn-success'>Editar</button>
-         <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=".$row->id."';}else{false;}\"class='btn btn-danger'>Excluir</button>
+         <button onclick=\"location.href='?page=editar&id=" . $row->id . "';\" class='btn btn-success'>Editar</button>
+         <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='?page=salvar&acao=excluir&id=" . $row->id . "';}else{false;}\"class='btn btn-danger'>Excluir</button>
          </td>";
 
         echo "</tr>";
